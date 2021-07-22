@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jul 17 12:17:41 2021
-
-@author: renuka
-"""
+"""This module contains functions for the creation of extension tables in the main notebook."""
 
 import pandas as pd
 import statsmodels.api as sma
@@ -15,10 +10,17 @@ import matplotlib.pyplot as plt
 from statsmodels.iolib.summary2 import summary_col
 from linearmodels.panel import PanelOLS
 
-#For NLSY79
 
 def extension_table1(df1):
     
+    """
+    Creates the first table in the results extension section
+    Regression with clustered standard errors at the individual level for NLSY79 and NLSY97
+    Input: Extension data with all variables 
+    Output: Table containing coefficients and p-values for relevant variables
+    """
+    
+    #NLSY79
     df2= df1.loc[(df1['age']>=23) & (df1['sample']==0), :]
     com_covs= ['female', 'hisp_male', 'hisp_female', 'black_male' , 'black_female']
     com_covs2= ['age', 'year' ,'div' , 'metro' ,'urban', 'educ']
@@ -61,6 +63,13 @@ def extension_table1(df1):
 
 
 def extension_table2(df1):
+    
+    """
+    Creates the second table in the results extension section
+    Regression with clustered standard errors at the individual level for NLSY79 and NLSY97
+    Input: Extension data with all variables 
+    Output: Table containing coefficients and p-values for relevant variables
+    """
     
     #NLSY79 Employees hired
     
