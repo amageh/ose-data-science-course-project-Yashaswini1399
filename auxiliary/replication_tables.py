@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jul 17 10:44:07 2021
+"""This module contains functions for the creation of replication tables in the main notebook."""
 
-@author: renuka
-"""
 
 import pandas as pd
 import statsmodels.api as sma
@@ -15,6 +11,14 @@ from statsmodels.iolib.summary2 import summary_col
 from linearmodels.panel import PanelOLS
 
 def replication_table1(df):
+    
+    """
+    Creates the first replication table
+    Regression with clustered standard errors at individual level
+    Input: The orginial Deming dataset with all the variables
+    Output: Regression table with relevant coefficients and p-values
+    """
+    
     #Getting the vars ready
     df1= df.loc[(df['complete79']==1) & (df['age']>=23) & (df['sample']==0), :]
     df1= pd.get_dummies(df1, columns= ['age', 'year' ,'div' , 'metro' ,'urban', 'educ']) 
@@ -73,6 +77,14 @@ def replication_table1(df):
     return final1
 
 def replication_table2(df):
+    
+    """
+    Creates the second replication table
+    Regression with clustered standard errors at individual level
+    Input: The orginial Deming dataset with all the variables
+    Output: Regression table with relevant coefficients and p-values
+    """
+    
     #Getting the vars ready
     df2= df.loc[(df['complete79']==1) & (df['age']>=23) & (df['sample']==0) & (df['wage'].notnull()), :]
     df2= pd.get_dummies(df2, columns= ['age', 'year' ,'div' , 'metro' ,'urban', 'educ','ind6090'])
@@ -118,6 +130,14 @@ def replication_table2(df):
     return final2
 
 def replication_table3(df):
+    
+    """
+    Creates the third replication table
+    Regression with clustered standard errors at individual level
+    Input: The orginial Deming dataset with all the variables
+    Output: Regression table with relevant coefficients and p-values
+    """
+    
     df3= df.loc[(df['complete79']==1) & (df['age']>=23) & (df['sample']==0)]
     year = pd.Categorical(df3.year)
     df3= df3.set_index(['pubid', 'year'])
@@ -172,6 +192,13 @@ def replication_table3(df):
     return final3
 
 def replication_table4(df):
+    
+    """
+    Creates the fourth replication table
+    Regression with clustered standard errors at individual level
+    Input: The orginial Deming dataset with all the variables
+    Output: Regression table with relevant coefficients and p-values
+    """
     
     #Getting the vars ready
     df4= df.loc[(df['age'] >=25) & (df['age'] <=33), :]
@@ -320,7 +347,7 @@ def summary_stats1(sum_stats):
 
 def summary_stats2(sum_stats2):
     """
-      Creates Table 1 for summary stats.
+      Creates Table 2 for summary stats.
     """
     variables = sum_stats2[['educ', 'wage', 'soc_nlsy2_std', 'afqt_std', 'female', 
                       'hisp_female','hisp_male', 'black_male', 'black_female']]
