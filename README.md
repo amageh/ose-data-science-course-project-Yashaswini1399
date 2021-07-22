@@ -12,7 +12,7 @@ The replication is carried on the main notebook from this repository. The auxili
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"
       width="109" height="20">
 </a>
-<a href="https://mybinder.org/v2/gh/OpenSourceEconomics/ose-data-science-course-project-Yashaswini1399/blob/master/David_Deming_replication.ipynb"
+<a href="https://mybinder.org/v2/gh/OpenSourceEconomics/ose-data-science-course-project-Yashaswini1399/blob/master>filepath=David_Deming_replication.ipynb"
     target="_parent">
     <img align="center"
        src="https://mybinder.org/badge_logo.svg"
