@@ -5,6 +5,7 @@
 David Deming (2017) examines the changing structure and the trends in the labor market from the 1990s and the 2000s to explain the evolving role of social skills in the labor market. The author formulates a theoretical model of "task trading" and examines the predictions of the model empirically using data from the panel surveys NLSY79 and NLSY97. He finds that the wage return to social skills is positive even after conditioning on cognitive skill, noncognitive skill, and a wide variety of other covariates, and that cognitive skill and social skill are complements. Deming also establishes workers with higher social skills self select into social skill–intensive occupations. He also examines changes in the returns to social skill between the NLSY79 and NLSY97, using nearly identical measures of skills and other covariates these surveys and finds that social skills were a much stronger predictor of employment and wages for young adults age 25 to 33 in the mid-2000s, compared to the 1980s and 1990s. 
 
 The replication is carried on the main notebook from this repository. The auxiliary folder contains different functions made for the replication tables and for the tables that are used in the extension results. The replication can also be visualized using nbviewer and mybinder:
+
 <a href="https://nbviewer.jupyter.org/github/OpenSourceEconomics/ose-data-science-course-project-Yashaswini1399/blob/master/David_Deming_replication.ipynb"
    target="_parent">
    <img align="center"
